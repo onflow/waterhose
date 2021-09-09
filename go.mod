@@ -1,4 +1,4 @@
-module github.com/onflow/waterhose
+module github.com/onflow/waterhose/v3
 
 go 1.16
 
