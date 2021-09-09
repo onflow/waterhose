@@ -1,0 +1,17 @@
+syntax = "proto3";
+package services;
+
+service WaterhoseService {
+    rpc PollTransaction(PollTransactionRequest) returns (PollTransactionResponse);
+}
+
+message PollTransactionRequest {
+    string tx_hash = 1;
+    string topic = 2;
+    string request_id = 3;
+    bytes reference_block_id = 4;
+}
+
+message PollTransactionResponse {
+    string request_id = 1;
+}
